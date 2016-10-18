@@ -7,6 +7,7 @@ import javax.ws.rs.Path;
 import javax.ws.rs.PathParam;
 import javax.ws.rs.Produces;
 import javax.ws.rs.core.MediaType;
+import java.util.ArrayList;
 
 /**
  * Created by ABarmin on 25.02.2016.
@@ -22,6 +23,10 @@ public class PersonService {
 
         Person person = new Person();
         person.setName("MyDesignStudio");
+        ArrayList<Integer> listOfNumbers = new ArrayList<Integer>();
+        listOfNumbers.add(new Integer(123));
+        listOfNumbers.add(new Integer(456));
+        person.setListOfNumber(listOfNumbers);
         person.setId(id);
         return person;
     }
