@@ -30,4 +30,15 @@ public class PersonService {
         person.setId(id);
         return person;
     }
+
+    @GET
+    @Produces(MediaType.APPLICATION_XML)
+    public Person getPerson(){
+        Person person = new Person();
+        person.setName("MyDesignStudio");
+        ArrayList<Integer> listOfNumbers = new ArrayList<Integer>();
+        person.setListOfNumber(listOfNumbers);
+        person.setId("666");
+        return person;
+    }
 }
